@@ -46,17 +46,17 @@ export default {
 </script>
 <style lang="less" scoped>
 .nav-container{
-  height: 55px;
+  height: 54px;
   width: 1920px;
   background: #fff;
   .nav-main{
-    width: 1212px;
+    width: 1199px;
     height:100%;
     margin: 0 auto;
     .logo{
       float: left;
-      width: 95px;
-      height: 55px;
+      width: 89px;
+      height: 47px;
       margin-right:154px;
       img{
         width:100%;
@@ -65,14 +65,14 @@ export default {
     }
     .nav-bar{
       float: left;
-      width: 772px;
+      width: 752px;
       height: 100%;
       display: flex;
       justify-content: space-between;
-      color: #3a3a3a;
+      color: #333;
+      font-family: PingFangSC-Semibold, PingFang SC;
       font-size: 18px;
-      font-weight: 700;
-      line-height: 55px;
+      line-height: 54px;
       text-align: center;
       div {
         padding: 0 20px ;
@@ -85,16 +85,16 @@ export default {
     }
     .users-bar{
       float: right;
-      width: 153px;
+      width: 160px;
       height: 100%;
       .users-item{
         display: flex;
         padding: 14px 0;
         div{
           border-right: 1px solid #9a2634;
-          width: 50px;
+          width: 39px;
           height: 22px;
-          padding: 0 14px;
+          padding:0 14px;
           img{
             width: 22px;
             height: 22px;

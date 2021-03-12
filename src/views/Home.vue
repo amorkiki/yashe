@@ -45,9 +45,7 @@
       </div>
     </div>
     <!-- 匠人定制 -->
-    <div class="customed">
-      <div class="cus-title"><block-title :title="title4"/></div>
-    </div>
+    <home-swip/>
     <!-- 哑舍精选 -->
     <choose-page/>
     <!-- 哑舍资讯 -->
@@ -68,9 +66,17 @@
           <div class="news">
             <div>
               <div class="news-pic"><img src="../assets/item/news1.png" alt=""></div>
+              <div class="news-con">
+                <div>张秀营大师极具工匠精神，作品深受收藏爱好者追捧，灵感多数取材于国画，擅长雕刻大场景山水件以及传统题材。1990年步入玉雕界起，张秀营就苦心钻研，通过十多年的努力，已将传统翡翠雕刻方式研究透彻，后跟随国家级工艺美术大师张志平潜心研究玉石雕刻。</div>
+                <div class="new-foot"><div>2019-10-22</div><div>人气值34375</div></div>
+              </div>
             </div>
             <div>
               <div class="news-pic"><img src="../assets/item/news2.png" alt=""></div>
+              <div class="news-con">
+                <div>张秀营大师极具工匠精神，作品深受收藏爱好者追捧，灵感多数取材于国画，擅长雕刻大场景山水件以及传统题材。1990年步入玉雕界起，张秀营就苦心钻研，通过十多年的努力，已将传统翡翠雕刻方式研究透彻，后跟随国家级工艺美术大师张志平潜心研究玉石雕刻。</div>
+                <div class="new-foot"><div>2019-10-22</div><div>人气值34375</div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -88,6 +94,7 @@ import MoreBtn from '@/components/MoreBtn.vue'
 import Footer from '../components/Footer.vue'
 import PlayPage from '../components/PlayPage.vue'
 import ChoosePage from '../components/ChoosePage.vue'
+import HomeSwip from '../components/HomeSwip.vue'
 
 export default {
   name: 'Home',
@@ -98,7 +105,8 @@ export default {
     MoreBtn,
     Footer,
     PlayPage,
-    ChoosePage
+    ChoosePage,
+    HomeSwip
   },
   data(){
     return{
@@ -124,8 +132,6 @@ export default {
         r3:'它会到哪里去，你也不知道。',r4:'在过程中，在你这里，',
         r5:'–呵护好，保存好，',r6:'这是你唯一的权利...'}
       ],
-      title4:'私人订制，匠人云集',
-      title6:'哑舍资讯'
     }
   }
 }
@@ -133,27 +139,26 @@ export default {
 <style lang="less" scoped>
 .service{
   box-sizing: border-box;
-  width: 878px;
-  height: 805px;
-  padding-top: 80px;
-  margin: 0 auto;
+  width: 875px;
+  height: 643px;
+  margin:80px auto;
   .service-title{
-    width: 270px;
-    margin: 0 auto;
+    display:flex;
+    justify-content: space-around;
   }
   .block-main{
     box-sizing: border-box;
-    margin-top: 42px;
+    margin: 43px 0 0;
     width:100%;
-    height: 354px;
+    height: 305px;
     display: flex;
     justify-content: space-between;
     .block-item{
-      width: 166px;
+      width: 164px;
       height: 100%;
       .icon{
-        height: 165px;
-        width:100%;
+        height: 164px;
+        width:164px;
         img{
           width: 100%;
           height: 100%;
@@ -161,21 +166,23 @@ export default {
       }
       .title{
         text-align: center;
-        font-size: 34px;
+        font-size: 36px;
+        color: #333;
         font-weight: 500;
-        padding: 25px 0;
+        margin:15px auto 10px;
       }
       .sub1,
       .sub2{
         text-align: center;
-        font-size: 22px;
+        font-size: 24px;
         color:#666;
       }
     }
   }
   .sentence{
-    width: 100%;
-    height: 138px;
+    width: 384px;
+    height: 99px;
+    margin:43px auto;
     .sen1,
     .sen2,
     .sen3{
@@ -246,14 +253,7 @@ export default {
     }
   }
 }
-.customed{
-  width: 1920px;
-  height: 656px;
-  .cus-title{
-    width:440px;
-    margin: 0 auto;
-  }
-}
+
 .yashenews{
   display: flex;
   flex-direction: column;
@@ -324,6 +324,8 @@ export default {
         width:518px;
         height: 234px;
         div{
+          display: flex;
+          justify-content: space-between;
           width: 100%;
           height: 106px;
           .news-pic{
@@ -333,6 +335,32 @@ export default {
               width: 100%;
               height: 100%;
             }
+          }
+          .news-con{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width:388px;
+            height: 103px;
+            :first-child{
+              width:388px;
+              height: 79px;
+              font-size: 12px;
+              font-family: PingFangSC-Regular, PingFang SC;
+              color: #666666;
+              line-height: 17px;
+            }
+            .new-foot{
+              width: 100%;
+              height: 17px;
+              :first-child{
+                float: left;
+              }
+              :last-child{
+                float: right;
+              }
+            }
+            
           }
         }
       }

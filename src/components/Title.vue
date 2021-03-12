@@ -28,20 +28,28 @@ export default {
 <style lang="less">
 .block{
   display: flex;
-  height: 70px;
+  height: 66px;
   .main{
-    height:70px;
+    height:66px;
     text-align: center;
     line-height: 70px;
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 700;
     // color: #333;
   }
-  .left-icon,
+  .left-icon{
+    width: 44px;
+    height: 66px;
+    margin-right:10px;
+    img{
+      width: 100%;
+      height:100%;
+    }
+  }
   .right-icon{
-    width: 46px;
-    height: 70px;
-    margin: 0 10px;
+    width: 44px;
+    height: 66px;
+    margin-left:10px;
     img{
       width: 100%;
       height:100%;

@@ -6,6 +6,9 @@ import store from './store'
 import 'lib-flexible'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+
+// import style (>= Swiper 6.x)
+import 'swiper/swiper-bundle.css'
 Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
 
 Vue.config.productionTip = false

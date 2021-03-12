@@ -3,7 +3,7 @@
       <div class="play-title"><block-title :title="title2" color="#fff"/></div>
       <div class="play-block">
         <div class="play-nav">
-          <div v-for="(item,i) in playNav" :key="i">{{item}}</div>
+          <div @click="clickPlayNav(i)" :class="{'currentPlayNav':currentNav == i}"  v-for="(item,i) in playNav" :key="i">{{item}}</div>
         </div>
         <div class="main-block">
           <div><img src="../assets/item/play1.png" alt=""></div>
@@ -35,6 +35,12 @@ export default {
     return{
       title2:'玩转物件',
       playNav:['全部','书画','瓷器','玉石','钟表','家具','金银器','珠宝','古着','更多'],
+      currentNav:0
+    }
+  },
+  methods:{
+    clickPlayNav(i){
+      this.currentNav=i
     }
   }
 }
@@ -42,22 +48,19 @@ export default {
 <style lang="less" scoped>
 .play{
   box-sizing: border-box;
-  height: 720px;
+  height: 719px;
   width:1920px;
   background:url('../assets/banner/bg1.jpg') ;
-  padding-top:42px ;
+  padding-top:50px ;
   .play-title{
     width: 270px;
-    margin: 0 auto;
-    block-title{
-      color:#fff !important;
-    }
+    margin: 0 auto ;
   }
   .play-block{
     position: relative;
     width:1080px;
-    height: 470px;
-    margin :20px auto 30px;
+    height: 474px;
+    margin :15px auto 29px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,12 +68,13 @@ export default {
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
-      width:1080px;
-      height: 40px;
-      color: #e9e7e6;
-      padding: 0 55px;
-      div{
-        border-bottom: 8px solid #9a7a53;
+      width:969px;
+      height: 43px;
+      color: #fff;
+      margin: 0 auto;
+      font-size: 18px;
+      .currentPlayNav{
+        border-bottom: 8px solid #9A7A53;
       }
     }
     .main-block{
@@ -79,7 +83,7 @@ export default {
       align-content:space-between;
       flex-wrap:wrap;
       width:1080px;
-      height:418px;
+      height:416px;
       div{
         background-color: yellowgreen;
         width: 200px;
@@ -91,6 +95,7 @@ export default {
       }
     }
     .arr-l{
+      cursor: pointer;
       box-sizing: border-box;
       position: absolute;
       top: 50%;
@@ -110,6 +115,7 @@ export default {
       }
     }
     .arr-r{
+      cursor: pointer;
       box-sizing: border-box;
       position: absolute;
       top: 50%;
@@ -128,16 +134,16 @@ export default {
         border-left: none;
       }
     }
-
   }
   .play-foot{
     :first-child{
       font-size: 18px;
-      color: #e9e7e6;
+      color: #fff;
       text-align: center;
+      font-weight: 400;
     }
     .arr-b{
-      margin: 15px auto 0;
+      margin: 8px auto 0;
       width: 20px;
       height: 20px;
       border: 5px solid  #9a7a53;

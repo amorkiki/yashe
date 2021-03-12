@@ -10,14 +10,17 @@ export default {
 .box{
   position: relative;
   box-sizing: border-box;
-  width: 164px;
+  font-size: 18px;
+  width: 163px;
   height: 44px;
-  border: 1px solid #9a2634;
+  border: 1px solid #9A2634;
   border-radius: 6px;
-  padding-left: 18px;
+  padding-left: 16px;
+  font-size: 18px;
+  font-family: '苹方-简 常规体';
   margin: 0 auto;
   color:#a2845f;
-  line-height: 46px;
+  line-height: 44px;
   i{
     img{
     position: absolute;
